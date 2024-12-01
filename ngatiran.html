@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INOVASI NGATIRAN</title>
+    <style>
+        body {
+            font-family: 'Cambria', serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            font-size: 18px;
+        }
+
+        /* Styling header */
+        header {
+    background: linear-gradient(to right, #ADD8E6, #FFB2D0); /* Warna biru pastel */
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+        /* Styling navigasi menu */
+        nav {
+    background: rgba(0, 0, 0, 0.1); /* Tambahkan latar belakang transparan */
+    padding: 10px 0;
+    width: 100%; /* Tetap memenuhi lebar layar */
+    position: relative; /* Hapus posisi absolute */
+    text-align: center; /* Pusatkan elemen navigasi */
+    margin-top: 10px; /* Tambahkan jarak dari heading */
+}
+
+.menu-bar {
+    display: inline-flex; /* Ubah menjadi inline-flex agar rapi di tengah */
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu-bar li {
+    margin: 0 15px;
+}
+
+        .menu-bar a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: color 0.3s ease;
+            cursor: pointer;
+        }
+
+        .menu-bar a:hover {
+            color: #2c3e50;
+            text-decoration: underline;
+        }
+
+
+        /* Layout container */
+        .container {
+            display: flex;
+            margin: 20px;
+        }
+
+        /* Sidebar kiri */
+        .sidebar-left {
+    background-color: #ADD8E6; /* Warna biru pastel */
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-right: 20px;
+}
+
+        .sidebar-left h3 {
+            margin-top: 0;
+        }
+
+        .sidebar-left ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .sidebar-left li {
+            margin: 10px 0;
+        }
+
+        .sidebar-left a {
+            text-decoration: none;
+            color: #3498db;
+            cursor: pointer;
+        }
+
+        .sidebar-left a:hover {
+            text-decoration: underline;
+        }
+
+        /* Main content styling */
+        .main-content {
+            flex: 3;
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: justify;
+        
+        }
+
+        /* Sidebar kanan */
+        .sidebar-right {
+            flex: 1;
+            padding: 20px;
+            margin-left: 20px;
+        }
+
+        /* Card design for right sidebar */
+        .card {
+    background-color: #ADD8E6; /* Warna biru pastel */
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    padding: 20px;
+    text-align: center;
+}
+
+        .card img {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            cursor: pointer;
+        }
+
+        .card h3 {
+            margin: 0;
+            font-size: 20px;
+            color: #2c3e50;
+        }
+
+        .card p {
+            font-size: 16px;
+            color: #7f8c8d;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Fullscreen image styling */
+        .fullscreen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            display: none;
+        }
+
+        .fullscreen img {
+            max-width: 100%;
+            max-height: 100%;
+            border-radius: 0px;
+        }
+
+        /* Footer styling */
+        footer {
+    background-color: #ADD8E6; /* Warna biru pastel */
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Inovasi Ngatiran Sebagai Pencegahan Ekspor Benih Lobster</h1>
+        <h2>“Nutrisi Global Air Terintegrasi Inovasi Resirkulasi Andal Nasional”</h2>
+        <!-- Navigasi Menu -->
+        <nav>
+            <ul class="menu-bar">
+                <li><a onclick="showContent('main')">Tentang NGATIRAN</a></li>
+                <li><a onclick="showContent('bagian1')"> Pakan PROTELLUS</a></li>
+                <li><a onclick="showContent('bagian2')"> Resirkulasi berbasis IOT</a></li>
+                <li><a onclick="showContent('bagian3')"> Platform Digital </a></li>
+                <li><a onclick="showContent('bagian4')"> Meet Our Team </a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <!-- Sidebar kiri -->
+        <div class="sidebar-left">
+            <h3>Daftar Isi</h3>
+            <ul>
+                <li><a onclick="showContent('main')">Tentang NGATIRAN</a></li>
+                <li><a onclick="showContent('bagian1')"> Bagian 1 : Pakan PROTELLUS</a></li>
+                <li><a onclick="showContent('bagian2')"> Bagian 2 : Resirkulasi berbasis IOT</a></li>
+                <li><a onclick="showContent('bagian3')"> Bagian 3 : Platform Digital </a></li>
+                <li><a onclick="showContent('bagian4')"> Meet Our Team </a></li>
+            </ul>
+        </div>
+
+        <!-- Main content area -->
+        <div class="main-content">
+            <h2 id="judul">NGATIRAN : Nutrisi Global Air Terintegrasi Inovasi Resirkulasi Andal Nasional</h2>
+            <p id="isi">
+                <img src="https://radarlombok.co.id/wp-content/uploads/2021/06/IMG-20210613-WA0003.jpg" alt="ngatiran" style="width: 100%; height: auto; border-radius: 10px; margin-bottom: 15px;">
+                Selamat datang di Ngatiran! Kami hadir untuk mendukung pertumbuhan budidaya lobster yang berkelanjutan, sejalan dengan tujuan SDG 14: Melestarikan Ekosistem Laut. Ngatiran menawarkan solusi terpadu bagi pembudidaya, baik pemula maupun yang sudah berpengalaman, dengan panduan mulai dari pembibitan hingga pendistribusian.
+                Melalui inovasi seperti Protellus, pakan unggulan berbahan lokal, dan sistem resirkulasi air berbasis IoT, kami membantu menciptakan lingkungan budidaya yang efisien dan ramah lingkungan. Bersama Ngatiran, mari majukan industri lobster sekaligus melestarikan ekosistem laut untuk generasi mendatang!
+                Sebelum itu, ayo kenali lebih dulu potensi lobster yang ada di Jerowaru, Lombok Timur, Nusa Tenggara Barat.
+
+                <iframe width="1000" height="500" src="https://www.youtube.com/embed/AVn0xgl-diU?si=stjsILnIVBp7NnIQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </p>
+        </div>
+        
+
+        <!-- Sidebar kanan -->
+        <div class="sidebar-right">
+            <div class="card" onclick="openFullscreen('https://cdn.antaranews.com/cache/1200x800/2020/11/08/pakanikanHOKKP.jpg')">
+                <img src="https://cdn.antaranews.com/cache/1200x800/2020/11/08/pakanikanHOKKP.jpg" alt="Image 1">
+                <h3>Pakan PROTELLUS</h3>
+                <p>Pakan inovatif ini dirancang untuk memenuhi kebutuhan nutrisi lobster di setiap tahap pertumbuhan.
+                </p>
+            </div>
+            <div class="card" onclick="openFullscreen('https://sc04.alicdn.com/kf/He6b9ca69e23043159aecd497ec050dc3Q.jpg')">
+                <img src="https://sc04.alicdn.com/kf/He6b9ca69e23043159aecd497ec050dc3Q.jpg" alt="Image 2">
+                <h3>Resirkulasi berbasis IOT</h3>
+                <p>Sistem resirkulasi berbasis IoT memungkinkan pemantauan dan pengendalian kualitas air secara real-time.</p>
+            </div>
+            <div class="card" onclick="openFullscreen('https://mtsn1tanahbumbu.com/wp-content/uploads/2020/10/unnamed.png')">
+                <img src="https://mtsn1tanahbumbu.com/wp-content/uploads/2020/10/unnamed.png" alt="Image 3">
+                <h3>Platform Digital</h3>
+                <p>Platform e-learning dirancang untuk membekali pembudidaya dengan pengetahuan dan keterampilan praktis dalam menggunakan teknologi modern, mengelola pakan, serta menjaga kualitas air. 
+                </p>
+            </div>
+            <div class="card" onclick="openFullscreen('img/foto1')">
+                <img src="img/foto1.jpg" alt="Image 3">
+                <h3>Meet Our Team</h3>
+                <p>Kenali Anggota dari Team Ngatiran yang akan membantu kamu.</p>
+            </div>
+            </div>
+        </div>
+        
+    </div>
+
+    <footer>
+        <p>Hak Cipta &copy; 2024 - SASA APRILISKA (E1R022092) </p>
+    </footer>
+
+    <!-- Fullscreen Image Modal -->
+    <div id="fullscreen" class="fullscreen" onclick="closeFullscreen()">
+        <img id="fullscreenImage" src="" alt="Fullscreen Image">
+    </div>
+
+
+    <script>
+        function showContent(bagian) {
+            var judul = document.getElementById("judul");
+            var isi = document.getElementById("isi");
+
+            if (bagian === 'main') {
+                judul.innerHTML = "NGATIRAN : Nutrisi Global Air Terintegrasi Inovasi Resirkulasi Andal Nasional";
+                isi.innerHTML = `<img src="img/foto2.jpg" alt="Image 4" style="width: 90%; height: auto; border-radius: 10px; margin-bottom: 15px;"> <p>Selamat datang di Ngatiran! Kami hadir untuk mendukung pertumbuhan budidaya lobster yang berkelanjutan, sejalan dengan tujuan SDG 14: Melestarikan Ekosistem Laut. Ngatiran menawarkan solusi terpadu bagi pembudidaya, baik pemula maupun yang sudah berpengalaman, dengan panduan mulai dari pembibitan hingga pendistribusian.
+                Melalui inovasi seperti Protellus, pakan unggulan berbahan lokal, dan sistem resirkulasi air berbasis IoT, kami membantu menciptakan lingkungan budidaya yang efisien dan ramah lingkungan. Bersama Ngatiran, mari majukan industri lobster sekaligus melestarikan ekosistem laut untuk generasi mendatang!
+                Sebelum itu, ayo kenali lebih dulu potensi lobster yang ada di Jerowaru, Lombok Timur, Nusa Tenggara Barat.</p> 
+                <li>
+                <strong>Lobster dengan helm atau pelindung kepala:</strong> 
+                Melambangkan perlindungan dan kesejahteraan lobster selama proses budidaya, serta penggunaan teknologi modern untuk menciptakan lingkungan optimal.
+            </li>
+            <li>
+                <strong>Bentuk berlian dengan warna biru dan merah muda:</strong>
+                - Berlian melambangkan kestabilan, keandalan, dan keseimbangan.<br>
+                - Biru mencerminkan elemen air, sedangkan merah muda menunjukkan perhatian terhadap kesejahteraan lobster.
+            </li>
+            <li>
+                <strong>Tulisan "NGATIRAN" berwarna oranye:</strong>
+                Warna oranye menggambarkan semangat, inovasi, dan optimisme. Penggunaan huruf besar menunjukkan skala besar dan kepercayaan diri inovasi ini.
+            </li>
+            <li>
+                <strong>Jangkar di bagian bawah logo:</strong>
+                Melambangkan hubungan kuat dengan laut sebagai habitat asli lobster dan fondasi kokoh dari sistem resirkulasi.
+            </li>
+            <li>
+                <strong>Lobster berwarna merah:</strong>
+                Warna merah menggambarkan kesehatan, keberlanjutan, dan hasil akhir berkualitas tinggi dari metode budidaya ini.
+            </li>`; 
+                
+            } else if (bagian === 'bagian1') {
+                judul.innerHTML = "Pakan PROTELLUS";
+                isi.innerHTML = `
+    <div style="text-align: center; margin-bottom: 20px;">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwv7-cBq14dNklQ9JHLWFYeWekyvN8-pTkiE9mLk2ndQyoDfFN9gVQq4xSl9Tgfa9gf28&usqp=CAU" 
+             alt="Ilustrasi Pakan Protellus" 
+             style="width: 100%; max-width: 600px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+    </div>
+    <div style="padding: 10px; border: 1px solid #ccc; border-radius: 8px; background-color: #f9f9f9;">
+        <h2>1. Komposisi Pakan Protellus</h2>
+        <p>
+            Protellus adalah pakan berbasis protein yang menggunakan sumber protein tinggi dari ikan kembung 
+            (<i>Rastrelliger spp.</i>), bahan baku lokal dengan kandungan protein yang sangat baik. Pakan ini 
+            dirancang untuk memenuhi kebutuhan nutrisi lobster pada berbagai tahap pertumbuhan mereka. Selain protein, 
+            Protellus juga diperkaya dengan vitamin, mineral, dan asam lemak esensial untuk mendukung kesehatan dan pertumbuhan lobster.
+        </p>
+        
+        <h2>2. Keunggulan Pakan Protellus</h2>
+        <ul style="list-style-type: disc; padding-left: 20px;">
+            <li>
+                <strong>Nutrisi Optimal:</strong> Memberikan nutrisi seimbang yang sesuai dengan kebutuhan lobster, 
+                mendukung pertumbuhan yang cepat dan sehat. Kandungan protein yang tinggi memberikan energi 
+                dan bahan bangunan untuk pertumbuhan dan perkembangan.
+            </li>
+            <li>
+                <strong>Ketersediaan Lokal dan Biaya:</strong> Menggunakan bahan baku lokal seperti ikan kembung 
+                menjadikan Protellus lebih terjangkau dibandingkan pakan impor. Hal ini juga mendukung ekonomi lokal 
+                dengan memanfaatkan sumber daya yang tersedia.
+            </li>
+            <li>
+                <strong>Peningkatan Kesehatan dan Ketahanan:</strong> Nutrisi yang lebih baik meningkatkan ketahanan lobster 
+                terhadap penyakit dan stres, yang berkontribusi pada tingkat kelangsungan hidup lebih tinggi dan kualitas produk yang lebih baik.
+            </li>
+        </ul>
+        
+        <h2>3. Penerapan dan Implementasi</h2>
+        <p>
+            Pakan Protellus dapat diterapkan dalam sistem budidaya dengan mudah. Pemberian pakan dilakukan secara 
+            teratur sesuai dengan kebutuhan nutrisi lobster pada berbagai tahap pertumbuhan. Sistem pemberian pakan otomatis 
+            dapat digunakan untuk memastikan distribusi pakan yang konsisten dan mengurangi kebutuhan tenaga kerja.
+        </p>
+        
+        <h2>4. Tantangan dan Solusi</h2>
+        <p>
+            Tantangan dalam penerapan Protellus meliputi memastikan kualitas bahan baku dan keberlanjutan pasokan. 
+            Solusi seperti kerja sama dengan pemasok lokal dan pemantauan kualitas bahan baku dapat membantu mengatasi tantangan ini. 
+            Selain itu, pelatihan bagi petani lobster mengenai penggunaan pakan ini sangat penting untuk memastikan efektivitasnya.
+        </p>
+    </div>
+</div>
+                `;
+            } else if (bagian === 'bagian2') {
+                judul.innerHTML = "Resirkulasi Berbasis IOT";
+                isi.innerHTML = `
+                <img src="https://cms.minapoli.com/media/tmp/d/f3890b7a0189383752be2bdca39fa5bf.png" alt="Ilustrasi RAS IOT" 
+             style="width: 100%; max-width: 600px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+        <p>
+            Teknologi resirkulasi air berbasis Internet of Things (IoT) bekerja dengan mengalirkan air dari kolam 
+            budidaya lobster melalui sistem filtrasi dan pemurnian sebelum dikembalikan ke kolam tersebut. Sistem ini 
+            menggunakan berbagai komponen seperti filter mekanis, filter biologis, dan sistem penambahan oksigen untuk 
+            menjaga kualitas air. Sensor IoT dipasang pada berbagai titik dalam sistem untuk memantau parameter penting 
+            seperti pH, salinitas, suhu, dan kadar oksigen terlarut secara real-time.
+        </p>
+        <p>
+            Sensor-sensor yang terhubung dengan jaringan IoT mengumpulkan data secara terus-menerus mengenai kondisi air. 
+            Data ini dikirim ke sistem kontrol pusat yang menganalisis informasi dan memberikan perintah otomatis untuk 
+            menyesuaikan parameter air jika diperlukan. Pengaturan otomatis ini memastikan bahwa kondisi air tetap optimal 
+            tanpa memerlukan intervensi manual yang sering.
+        </p>
+`;
+        } else if (bagian === 'bagian3') {
+                judul.innerHTML = "Platform Digital";
+                isi.innerHTML = `
+                <p style="text-align: justify;">
+        Dengan adanya platform pembelajaran digital yang mengintegrasikan konsep Ngatiran, keterampilan pembudidaya lobster akan meningkat dalam beberapa aspek. Berikut adalah penjelasan rinci:
+    </p>
+    <!-- Poin 1 -->
+    <div style="margin-bottom: 20px; border: 1px solid #ccc; border-radius: 8px; padding: 10px; background-color: #f9f9f9;">
+        <h2>1. Peningkatan Keterampilan dan Pengetahuan Teknis</h2>
+        <p>
+            Platform ini menyediakan akses ke materi pelatihan dan tutorial yang dirancang untuk meningkatkan keterampilan teknis pembudidaya lobster. 
+            Dengan pembelajaran berbasis video, dokumen interaktif, dan simulasi, pembudidaya dapat mempelajari cara mengelola usaha budidaya secara 
+            lebih efektif, mulai dari pengelolaan kualitas air, pemberian pakan, hingga teknik konservasi modern.
+        </p>
+        <div style="text-align: center;">
+            <img src="https://diksimerdeka.com/wp-content/uploads/2020/12/20201218_181701_compress78.jpg" 
+                 alt="Peningkatan Keterampilan Teknis" 
+                 style="width: 100%; max-width: 600px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+        </div>
+    </div>
+
+    <!-- Poin 2 -->
+    <div style="margin-bottom: 20px; border: 1px solid #ccc; border-radius: 8px; padding: 10px; background-color: #f9f9f9;">
+        <h2>2. Kesadaran akan Konservasi</h2>
+        <p>
+            Platform ini juga mengedukasi pembudidaya tentang pentingnya menjaga ekosistem laut dan populasi lobster secara berkelanjutan. 
+            Melalui modul konservasi, pembudidaya diajak untuk memahami bagaimana aktivitas budidaya yang ramah lingkungan dapat membantu 
+            menjaga kelangsungan industri perikanan di masa depan.
+        </p>
+        <div style="text-align: center;">
+            <img src="https://budaya.jogjaprov.go.id/view_image/images/1690420661_e90c47bc8d7167b30abe8fcf679b39c1.jpg" 
+                 alt="Edukasi Konservasi" 
+                 style="width: 100%; max-width: 600px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+        </div>
+    </div>
+
+    <!-- Poin 3 -->
+    <div style="margin-bottom: 20px; border: 1px solid #ccc; border-radius: 8px; padding: 10px; background-color: #f9f9f9;">
+        <h2>3. Inovasi dalam Budidaya Lobster</h2>
+        <p>
+            Dengan memanfaatkan teknologi digital, pembudidaya diajak untuk mengadopsi inovasi terbaru dalam budidaya lobster, seperti penggunaan 
+            sistem IoT, pakan berformulasi khusus seperti Protellus, hingga penerapan teknologi resirkulasi air. Platform ini juga membuka peluang 
+            kolaborasi dengan ahli perikanan untuk mendukung pengembangan inovasi lebih lanjut.
+        </p>
+        <div style="text-align: center;">
+            <img src="https://dibimbing-cdn.sgp1.digitaloceanspaces.com/media-strapi/fb479a08e02473df221cdbb009fbb9ed.webp" 
+                 alt="Inovasi Budidaya Lobster" 
+                 style="width: 100%; max-width: 600px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+        </div>
+    </div>
+`;
+} else if (bagian === 'bagian4') {
+                judul.innerHTML = "Meet Our Team";
+                isi.innerHTML = `
+                <p style="text-align: justify;">
+        Silahkan hubungi kami untuk mengetahui lebih lanjut mengenai NGATIRAN :</p>
+        <div style="display: flex; justify-content: center; gap: 20px; align-items: center;">
+    <!-- Anggota Tim 1 -->
+    <div style="text-align: center;">
+        <img src="img/foto3.jpg" 
+             alt="Ananta Zael Gimnastiar" 
+             style="width: 150px; height: 150px; border-radius: 50%; border: 3px solid #4CAF50; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+        <p>Ananta Zael Gimnastiar</p>
+        <p>
+            <a href="https://www.instagram.com/anantazael/" target="_blank" style="text-decoration: none; color: #4CAF50;">Instagram</a>
+        </p>
+    </div>
+
+    <!-- Anggota Tim 2 -->
+    <div style="text-align: center;">
+        <img src="img/foto4.jpg" 
+             alt="Sasa Apriliska" 
+             style="width: 150px; height: 150px; border-radius: 50%; border: 3px solid #4CAF50; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+        <p>Sasa Apriliska</p>
+        <p>
+            <a href="https://www.instagram.com/sasa.prlyskaa/" target="_blank" style="text-decoration: none; color: #4CAF50;">Instagram</a>
+        </p>
+    </div>
+
+    <!-- Anggota Tim 3 -->
+    <div style="text-align: center;">
+        <img src="img/foto5.jpg" 
+             alt="Muhammad Naufal Rahmatullah" 
+             style="width: 150px; height: 150px; border-radius: 50%; border: 3px solid #4CAF50; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+        <p>Muhammad Naufal Rahmatullah</p>
+        <p>
+            <a href="https://id.linkedin.com/in/muhammad-naufal-rahmatullah-a56230235" target="_blank" style="text-decoration: none; color: #4CAF50;">LinkedIn</a>
+        </p>
+    </div>
+
+    <!-- Anggota Tim 4 -->
+    <div style="text-align: center;">
+        <img src="img/foto6.jpg" 
+             alt="Baiq Faridha Aulya Maharani" 
+             style="width: 150px; height: 150px; border-radius: 50%; border: 3px solid #4CAF50; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+        <p>Baiq Faridha Aulya Maharani</p>
+        <p>
+            <a href="https://id.linkedin.com/in/baiq-faridha-aulya-maharani-4a821b308" target="_blank" style="text-decoration: none; color: #4CAF50;">LinkedIn</a>
+        </p>
+    </div>
+</div>
+
+
+`;
+            }
+
+        }
+
+        function openFullscreen(imageUrl) {
+            var fullscreen = document.getElementById("fullscreen");
+            var fullscreenImage = document.getElementById("fullscreenImage");
+            fullscreenImage.src = imageUrl;
+            fullscreen.style.display = "flex";
+        }
+
+        function closeFullscreen() {
+            var fullscreen = document.getElementById("fullscreen");
+            fullscreen.style.display = "none";
+        }
+    </script>
+</body>
+</html>
